@@ -1,0 +1,150 @@
+/* Βασικό σώμα */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Navigation bar */
+nav {
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 10px 10px;
+}
+
+/* Ενεργό animated gradient για nav */
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-nav {
+  background: linear-gradient(270deg, #0a3d62, #3c6382, #0a3d62);
+  background-size: 600% 600%;
+  animation: bgMove 20s ease infinite;
+}
+
+/* Links στο navigation */
+nav a {
+  color: #f5f6fa;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #3c6382;
+  color: #d1d8e0;
+}
+
+/* Κεφαλίδες */
+h1, h2 {
+  color: #0a3d62;
+  margin-top: 0;
+}
+
+/* Container divs */
+div {
+  padding: 30px 25px;
+  max-width: 700px;
+  margin: 40px auto;
+  background: #f7f9fc;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(10, 61, 98, 0.1);
+  text-align: left;
+}
+
+/* Labels στα forms */
+form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #0a3d62;
+}
+
+/* Inputs, selects, textarea */
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 6px;
+  border: 1.5px solid #a4b0be;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #0a3d62;
+  box-shadow: 0 0 5px #0a3d62aa;
+}
+
+/* Κουμπί υποβολής */
+button {
+  background-color: #0a3d62;
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin-top: 14px;
+}
+
+button:hover {
+  background-color: #1e90ff;
+}
+
+/* Flip animation keyframes */
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+/* Flip class */
+button.flip {
+  animation: flip 0.6s ease forwards;
+}
+
+/* Μικρή βελτίωση για paragraph */
+p {
+  margin-top: 12px;
+  color: #444;
+  font-size: 17px;
+}
+
+/* Responsive μικρά οθόνης */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  div {
+    margin: 20px 10px;
+    padding: 20px 15px;
+  }
+}
