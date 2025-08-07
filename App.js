@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './App.css';
-import technetlogo from './Assets/technetlogo.png'; // σωστή διαδρομή
+import technetlogo from './Assets/technetlogo.png';
 import { FaPhone, FaEnvelope, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 function ContactInfo() {
@@ -23,13 +23,13 @@ function ContactInfo() {
       <p><FaPhone style={{ marginRight: '8px', color: '#0a3d62' }} /> Τηλέφωνο: <a href="tel:+306934086944" style={{ color: '#0a3d62', textDecoration: 'none' }}>+306934086944</a></p>
       <p><FaEnvelope style={{ marginRight: '8px', color: '#0a3d62' }} /> Email: <a href="mailto:akiskarou@gmail.com" style={{ color: '#0a3d62', textDecoration: 'none' }}>akiskarou@gmail.com</a></p>
       <p>
-        <FaInstagram style={{ marginRight: '8px', color: '#E1306C' }} /> Instagram: 
+        <FaInstagram style={{ marginRight: '8px', color: '#E1306C' }} /> Instagram:
         <a href="https://www.instagram.com/tech.net_solutions" target="_blank" rel="noreferrer" style={{ color: '#E1306C', textDecoration: 'none', marginLeft: '5px' }}>
           @tech.net_solutions
         </a>
       </p>
       <p>
-        <FaFacebook style={{ marginRight: '8px', color: '#3b5998' }} /> Facebook: 
+        <FaFacebook style={{ marginRight: '8px', color: '#3b5998' }} /> Facebook:
         <a href="https://www.facebook.com/profile.php?id=61568138280923" target="_blank" rel="noreferrer" style={{ color: '#3b5998', textDecoration: 'none', marginLeft: '5px' }}>
           TechNet Solutions
         </a>
@@ -50,7 +50,6 @@ function Home() {
         <p>Αυτή η σελίδα είναι προς το παρόν κενή.</p>
         <p>Μπορείτε να δείτε τις υπηρεσίες μας ή να κάνετε αίτηση αν χρειάζεστε βοήθεια.</p>
       </div>
-
       <ContactInfo />
     </motion.div>
   );
@@ -92,7 +91,7 @@ function RequestRepair() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/api/request', {  // <== Σωστό endpoint
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/request`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -112,7 +111,7 @@ function RequestRepair() {
     }
 
     const button = document.querySelector('button[type="submit"]');
-    if(button){
+    if (button) {
       button.classList.add('flip');
       setTimeout(() => button.classList.remove('flip'), 600);
     }
