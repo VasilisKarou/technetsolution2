@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f3577b56.css",
+    "main.js": "/static/js/main.f7cf0eb7.js",
+    "static/js/453.caa2700c.chunk.js": "/static/js/453.caa2700c.chunk.js",
+    "static/media/technetlogo.png": "/static/media/technetlogo.39ba594189b8654b275e.png",
+    "index.html": "/index.html",
+    "main.f3577b56.css.map": "/static/css/main.f3577b56.css.map",
+    "main.f7cf0eb7.js.map": "/static/js/main.f7cf0eb7.js.map",
+    "453.caa2700c.chunk.js.map": "/static/js/453.caa2700c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3577b56.css",
+    "static/js/main.f7cf0eb7.js"
+  ]
+}
